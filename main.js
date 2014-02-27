@@ -2,9 +2,15 @@ window.onload = function() {
 
 	var submit = document.getElementById( 'submit' );
 	var task   = document.getElementById( 'task' );
-	var form   = document.getElementById('main');
+	var form   = document.getElementById( 'main');
 
 	form.addEventListener('submit', clickHandler);
+
+	var data = localStorage.getItem("item");
+
+	if (localStorage.getItem("item")) {
+		console.log(data);
+	};
 
 
 	function clickHandler(e) {
@@ -13,8 +19,11 @@ window.onload = function() {
 		var text  = document.getElementById( 'item' );
 		var entry = document.createElement( 'li' );
 
+		// Store
+		localStorage.setItem("item", text.value);
+
 		// generates the todo list using the value of text and creates the delete button
-		entry.innerHTML = '<span class="content">' + text.value + '</span> ' + ' <button class="btn-delete"> delete </button>';
+		entry.innerHTML = '<span class="content">' + localStorage.getItem("item") + '</span> ' + ' <button class="btn-delete"> delete </button>';
 		task.appendChild( entry );
 
 		// gets the delete button creates a click event and binds/passes the deleteHandler function with value from entry
@@ -31,6 +40,7 @@ window.onload = function() {
 
 		// sets the input text field value to blank after entering an todo input
 		text.value = '';
+		console.log(localStorage.getItem("item"));
 
 	}
 
