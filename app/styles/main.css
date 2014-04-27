@@ -1,0 +1,82 @@
+* {
+	margin  : 0;
+	padding : 0;
+}
+
+body {
+    background-color: #eaeaea;
+}
+
+h1 {
+	color: #b3b3b3;
+}
+
+footer {
+	color: #a6a6a6;
+	padding-top: 2em;
+}
+
+footer p {
+	width     : 34%;
+	margin    : 1em auto;
+	font-size : 0.8em;
+}
+
+#check-all {
+	margin: 0 0 0 19px;
+}
+
+#new-todo {
+	background-color : rgba(0, 0, 0, 0.02);
+	border-top       : 1em solid #8d7d77;
+}
+
+#new-todo form:focus {
+	outline: none;
+}
+
+#main {
+	width  : 37%;
+	margin : 0 auto;
+}
+
+#main header h1 {
+	width     : 2.5em;
+	margin    : 0.5em auto;
+	font-size : 3em;
+}
+
+#todos {
+	list-style       : none;
+	padding          : 0.7em;
+	background-color : #fff;
+	border-top       : 1px dashed black;
+}
+
+#todos:hover .destroy {
+	display : inline-block;
+}
+
+#todos span {
+	border-left : 5px double red;
+	padding     : 0.5em;
+	margin-left : 1em;
+	font-size: 24px;
+
+}
+
+#write-something {
+	border-left      : 5px double red;
+	padding          : 10px 15px;
+	margin-left      : 0.5em;
+	width            : 84%;
+	background-color : inherit;
+	outline          : none;
+	font-size: 24px;
+}
+
+.destroy {
+	float        : right;
+	margin-right : 1em;
+	display      : none;
+}
